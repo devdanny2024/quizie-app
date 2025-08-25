@@ -1,40 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+Quizie - AI-Powered Interview Question Generator
+Quizie is a modern web application that leverages the power of generative AI to create tailored interview questions. Users can input a topic, a company name, or both, and receive a custom set of questions to help them prepare for their next job interview with confidence.
 
-## Getting Started
+✨ Features
+AI-Powered Question Generation: Utilizes Google's Gemini Flash model to generate relevant and insightful interview questions.
 
-First, run the development server:
+Customizable Quizzes: Users can specify a topic/skill and a company name to get highly relevant questions.
 
-```bash
+Variable Length: Choose to generate between 10 and 20 questions per session.
+
+Interview-Focused Content: Questions are designed to cover technical skills, behavioral scenarios, and company-specific knowledge.
+
+Study Aids: Each generated question comes with "Points to Consider" and a "Suggested Approach" to guide the user's preparation.
+
+Sleek, Responsive UI: A clean and modern interface built with Tailwind CSS that works beautifully on all devices.
+
+🚀 Tech Stack
+Framework: Next.js (with Pages Router)
+
+Language: TypeScript
+
+Styling: Tailwind CSS
+
+AI Model: Google Gemini API
+
+Deployment: Vercel
+
+🛠️ Getting Started
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+Prerequisites
+Node.js (v18.x or later recommended)
+
+npm or yarn
+
+A Google Gemini API Key for local development.
+
+Installation
+Clone the repository:
+
+git clone https://github.com/your-username/quizie-app.git
+cd quizie-app
+
+Install dependencies:
+
+npm install
+# or
+# yarn install
+
+Set up environment variables:
+Create a file named .env.local in the root of your project and add your Gemini API key:
+
+GEMINI_API_KEY=your_actual_gemini_api_key_here
+
+Run the development server:
+
 npm run dev
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# yarn dev
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+☁️ Deployment
+This project is optimized for deployment on Vercel.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Environment Variables on Vercel
+To deploy successfully, you must add your Gemini API key to your Vercel project's environment variables:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Go to your project's dashboard on Vercel.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Navigate to Settings > Environment Variables.
 
-## Learn More
+Add a new variable with the following details:
 
-To learn more about Next.js, take a look at the following resources:
+Name: GEMINI_API_KEY
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+Value: your_actual_gemini_api_key_here
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Save the variable and redeploy your project for the changes to take effect.
