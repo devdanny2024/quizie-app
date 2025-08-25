@@ -80,8 +80,12 @@ export default function LandingPage() {
             const data: QuizQuestion[] = await response.json();
             setQuiz(data);
 
-        } catch (err: any) {
-            setError(err.message || 'An unexpected error occurred.');
+        } catch (err: unknown) { // Changed 'any' to 'unknown' for type safety
+            if (err instanceof Error) {
+                setError(err.message);
+            } else {
+                setError('An unexpected error occurred.');
+            }
         } finally {
             setIsLoading(false);
         }
